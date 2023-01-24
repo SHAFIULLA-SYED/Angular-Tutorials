@@ -14,9 +14,13 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-  addNewItem(value : string)
+  addNewItem(username : string,password : string)
   {
-    this.newItemEvent.emit(value);
+
+    if(username.length >0 && password.length>0)
+      this.newItemEvent.emit(username);
+    else
+      console.log(" Empty Input !!!!!!!!!!! ");
   }
 
 
